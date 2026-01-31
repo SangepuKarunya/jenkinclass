@@ -3,11 +3,13 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git ''
-            }
-        }
+       stage('Clone') {
+    steps {
+        git branch: 'master',
+            url: 'https://github.com/SangepuKarunya/jenkinclass.git'
+    }
+}
+
 
         stage('Maven Build') {
             steps {
